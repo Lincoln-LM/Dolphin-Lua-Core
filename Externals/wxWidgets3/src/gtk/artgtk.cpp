@@ -34,10 +34,10 @@
 
 
 // ----------------------------------------------------------------------------
-// wxGTK2ArtProvider
+// wxGTK3ArtProvider
 // ----------------------------------------------------------------------------
 
-class wxGTK2ArtProvider : public wxArtProvider
+class wxGTK3ArtProvider : public wxArtProvider
 {
 protected:
     virtual wxBitmap CreateBitmap(const wxArtID& id, const wxArtClient& client,
@@ -48,7 +48,7 @@ protected:
 
 /*static*/ void wxArtProvider::InitNativeProvider()
 {
-    PushBack(new wxGTK2ArtProvider);
+    PushBack(new wxGTK3ArtProvider);
 }
 
 // ----------------------------------------------------------------------------
@@ -279,7 +279,7 @@ wxIconBundle DoCreateIconBundle(const char *stockid,
 
 } // anonymous namespace
 
-wxBitmap wxGTK2ArtProvider::CreateBitmap(const wxArtID& id,
+wxBitmap wxGTK3ArtProvider::CreateBitmap(const wxArtID& id,
                                          const wxArtClient& client,
                                          const wxSize& size)
 {
@@ -311,7 +311,7 @@ wxBitmap wxGTK2ArtProvider::CreateBitmap(const wxArtID& id,
 }
 
 wxIconBundle
-wxGTK2ArtProvider::CreateIconBundle(const wxArtID& id,
+wxGTK3ArtProvider::CreateIconBundle(const wxArtID& id,
                                     const wxArtClient& WXUNUSED(client))
 {
     wxIconBundle bundle;

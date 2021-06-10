@@ -53,7 +53,7 @@ public:
 #if wxUSE_TIMER
     virtual wxTimerImpl *CreateTimerImpl(wxTimer *timer);
 #endif
-#if wxUSE_THREADS && defined(__WXGTK20__)
+#if wxUSE_THREADS && defined(__WXGTK30__)
     virtual void MutexGuiEnter();
     virtual void MutexGuiLeave();
 #endif
@@ -63,13 +63,13 @@ public:
 #endif
     virtual wxPortId GetToolkitVersion(int *majVer = NULL, int *minVer = NULL) const;
 
-#ifdef __WXGTK20__
+#ifdef __WXGTK30__
     virtual wxString GetDesktopEnvironment() const;
     virtual wxString GetStandardCmdLineOptions(wxArrayString& names,
                                                wxArrayString& desc) const;
-#endif // __WXGTK20____
+#endif // __WXGTK30____
 
-#if defined(__WXGTK20__)
+#if defined(__WXGTK30__)
     virtual bool ShowAssertDialog(const wxString& msg);
 #endif
 

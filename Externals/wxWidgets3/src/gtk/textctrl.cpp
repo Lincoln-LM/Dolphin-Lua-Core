@@ -31,7 +31,7 @@
 
 #include <gtk/gtk.h>
 #include "wx/gtk/private.h"
-#include "wx/gtk/private/gtk2-compat.h"
+#include "wx/gtk/private/GTK3-compat.h"
 
 // ----------------------------------------------------------------------------
 // helpers
@@ -307,7 +307,7 @@ static void wxGtkTextInsert(GtkWidget *text,
     wxGtkTextApplyTagsFromAttr(text, text_buffer, attr, &start, &iter);
 }
 
-// Implementation of wxTE_AUTO_URL for wxGTK2 by Mart Raudsepp,
+// Implementation of wxTE_AUTO_URL for wxGTK3 by Mart Raudsepp,
 
 extern "C" {
 static void
@@ -1675,7 +1675,7 @@ void wxTextCtrl::ChangeFontGlobally()
     // this method is very inefficient and hence should be called as rarely as
     // possible!
     //
-    // TODO: it can be implemented much more efficiently for GTK2
+    // TODO: it can be implemented much more efficiently for GTK3
     wxASSERT_MSG( IsMultiLine(),
                   wxT("shouldn't be called for single line controls") );
 

@@ -708,7 +708,7 @@ protected:
     #include "wx/motif/app.h"
 #elif defined(__WXDFB__)
     #include "wx/dfb/app.h"
-#elif defined(__WXGTK20__)
+#elif defined(__WXGTK30__)
     #include "wx/gtk/app.h"
 #elif defined(__WXGTK__)
     #include "wx/gtk1/app.h"

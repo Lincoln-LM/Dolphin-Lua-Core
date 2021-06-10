@@ -29,7 +29,7 @@
 
 class WXDLLIMPEXP_FWD_CORE wxImageList;
 
-#if !(defined(__WXGTK20__) || defined(__WXOSX__)) || defined(__WXUNIVERSAL__)
+#if !(defined(__WXGTK30__) || defined(__WXOSX__)) || defined(__WXUNIVERSAL__)
 // #if !(defined(__WXOSX__)) || defined(__WXUNIVERSAL__)
     #define wxHAS_GENERIC_DATAVIEWCTRL
 #endif
@@ -925,7 +925,7 @@ typedef void (wxEvtHandler::*wxDataViewEventFunction)(wxDataViewEvent&);
 
 #ifdef wxHAS_GENERIC_DATAVIEWCTRL
     #include "wx/generic/dataview.h"
-#elif defined(__WXGTK20__)
+#elif defined(__WXGTK30__)
     #include "wx/gtk/dataview.h"
 #elif defined(__WXMAC__)
     #include "wx/osx/dataview.h"

@@ -39,7 +39,7 @@ public:
 #elif defined(__WXMOTIF__)
     #define wxCURSOR_DEFAULT_TYPE   wxBITMAP_TYPE_XBM
     #include "wx/motif/cursor.h"
-#elif defined(__WXGTK20__)
+#elif defined(__WXGTK30__)
     #ifdef __WINDOWS__
         #define wxCURSOR_DEFAULT_TYPE   wxBITMAP_TYPE_CUR_RESOURCE
     #else

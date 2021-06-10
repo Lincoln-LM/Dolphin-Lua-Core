@@ -14,10 +14,10 @@ CXX_DEFINE = /define=(__WXGTK__=1,__WXUNIVERSAL__==1)/float=ieee\
 CC_DEFINE = /define=(__WXGTK__=1,__WXUNIVERSAL__==1)/float=ieee\
 	/name=(as_is,short)/ieee=denorm
 .else
-.ifdef __WXGTK2__
-CXX_DEFINE = /define=(__WXGTK__=1,VMS_GTK2==1)/float=ieee\
+.ifdef __WXGTK3__
+CXX_DEFINE = /define=(__WXGTK__=1,VMS_GTK3==1)/float=ieee\
 	/name=(as_is,short)/ieee=denorm/assume=(nostdnew,noglobal_array_new)
-CC_DEFINE = /define=(__WXGTK__=1,VMS_GTK2==1)/float=ieee\
+CC_DEFINE = /define=(__WXGTK__=1,VMS_GTK3==1)/float=ieee\
 	/name=(as_is,short)/ieee=denorm
 .else
 CXX_DEFINE = /define=(__WXGTK__=1)/float=ieee/name=(as_is,short)/iee=denorm\
@@ -175,11 +175,11 @@ all : $(SOURCES)
 	library [--.lib]libwx_gtk_univ.olb $(OBJECTS)
 	If f$getsyi("HW_MODEL") .le. 2048 then library [--.lib]libwx_gtk_univ.olb [.CXX_REPOSITORY]*.obj
 .else
-.ifdef __WXGTK2__
-	library [--.lib]libwx_gtk2.olb $(OBJECTS)
-	If f$getsyi("HW_MODEL") .le. 2048 then library [--.lib]libwx_gtk2.olb [.CXX_REPOSITORY]*.obj
+.ifdef __WXGTK3__
+	library [--.lib]libwx_GTK3.olb $(OBJECTS)
+	If f$getsyi("HW_MODEL") .le. 2048 then library [--.lib]libwx_GTK3.olb [.CXX_REPOSITORY]*.obj
 	$(MMS)$(MMSQUALIFIERS) $(OBJECTS0)
-	library [--.lib]libwx_gtk2.olb $(OBJECTS0)
+	library [--.lib]libwx_GTK3.olb $(OBJECTS0)
 .else
 	library [--.lib]libwx_gtk.olb $(OBJECTS)
 	If f$getsyi("HW_MODEL") .le. 2048 then library [--.lib]libwx_gtk.olb [.CXX_REPOSITORY]*.obj

@@ -213,7 +213,7 @@ protected:
 
 #if defined(__WXMSW__)
     #include "wx/msw/region.h"
-#elif defined(__WXGTK20__)
+#elif defined(__WXGTK30__)
     #include "wx/gtk/region.h"
 #elif defined(__WXGTK__)
     #include "wx/gtk1/region.h"

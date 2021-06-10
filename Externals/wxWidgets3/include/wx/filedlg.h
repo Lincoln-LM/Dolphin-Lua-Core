@@ -231,7 +231,7 @@ wxSaveFileSelector(const wxString& what,
     #include "wx/msw/filedlg.h"
 #elif defined(__WXMOTIF__)
     #include "wx/motif/filedlg.h"
-#elif defined(__WXGTK20__)
+#elif defined(__WXGTK30__)
     #include "wx/gtk/filedlg.h"     // GTK+ > 2.4 has native version
 #elif defined(__WXGTK__)
     #include "wx/gtk1/filedlg.h"

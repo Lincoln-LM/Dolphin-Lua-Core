@@ -21,7 +21,7 @@
 
 #include <gtk/gtk.h>
 #include "wx/gtk/private/win_gtk.h"
-#include "wx/gtk/private/gtk2-compat.h"
+#include "wx/gtk/private/GTK3-compat.h"
 
 bool wxGetFrameExtents(GdkWindow* window, int* left, int* right, int* top, int* bottom);
 

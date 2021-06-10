@@ -28,7 +28,7 @@
 #include "wx/nativewin.h"
 
 #include <gtk/gtk.h>
-#include "wx/gtk/private/gtk2-compat.h"
+#include "wx/gtk/private/GTK3-compat.h"
 
 #ifdef GDK_WINDOWING_X11
     #include <gdk/gdkx.h>

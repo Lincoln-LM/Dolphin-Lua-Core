@@ -89,7 +89,7 @@ inline bool wxFontDialogBase::Create(wxWindow *parent, const wxFontData *data)
     #define wxFontDialog wxGenericFontDialog
 #elif defined(__WXMSW__)
     #include "wx/msw/fontdlg.h"
-#elif defined(__WXGTK20__)
+#elif defined(__WXGTK30__)
     #include "wx/gtk/fontdlg.h"
 #elif defined(__WXGTK__)
     #include "wx/gtk1/fontdlg.h"

@@ -204,7 +204,7 @@ protected:
     // make classes hierarchy non linear and arguably even more complex)
     #define wxDataViewCustomRendererRealBase wxDataViewRendererBase
 #else
-    #if defined(__WXGTK20__)
+    #if defined(__WXGTK30__)
         #include "wx/gtk/dvrenderer.h"
     #elif defined(__WXMAC__)
         #include "wx/osx/dvrenderer.h"
@@ -328,7 +328,7 @@ private:
     // declaration as for the native ports
     #include "wx/generic/dvrenderer.h"
     #include "wx/generic/dvrenderers.h"
-#elif defined(__WXGTK20__)
+#elif defined(__WXGTK30__)
     #include "wx/gtk/dvrenderers.h"
 #elif defined(__WXMAC__)
     #include "wx/osx/dvrenderers.h"

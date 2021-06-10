@@ -50,7 +50,7 @@ void wxTextMeasure::Init()
         wxClassInfo* const ci = m_dc->GetImpl()->GetClassInfo();
 
         // Currently the code here only works with wxWindowDCImpl and only in
-        // wxGTK2 as wxGTK3 uses Cairo and not Pango for all its DCs.
+        // wxGTK3 as wxGTK3 uses Cairo and not Pango for all its DCs.
         if ( ci->IsKindOf(wxCLASSINFO(wxWindowDCImpl)))
         {
             m_useDCImpl = false;

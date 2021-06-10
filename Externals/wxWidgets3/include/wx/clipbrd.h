@@ -153,7 +153,7 @@ typedef void (wxEvtHandler::*wxClipboardEventFunction)(wxClipboardEvent&);
     #include "wx/msw/clipbrd.h"
 #elif defined(__WXMOTIF__)
     #include "wx/motif/clipbrd.h"
-#elif defined(__WXGTK20__)
+#elif defined(__WXGTK30__)
     #include "wx/gtk/clipbrd.h"
 #elif defined(__WXGTK__)
     #include "wx/gtk1/clipbrd.h"

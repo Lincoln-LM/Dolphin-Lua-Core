@@ -503,7 +503,7 @@ bool wxGenericDirCtrl::Create(wxWindow *parent,
     treeStyle |= wxTR_HIDE_ROOT;
 #endif
 
-#ifdef __WXGTK20__
+#ifdef __WXGTK30__
     treeStyle |= wxTR_NO_LINES;
 #endif
 
@@ -619,7 +619,7 @@ void wxGenericDirCtrl::SetupSections()
 
     size_t n, count = wxGetAvailableDrives(paths, names, icons);
 
-#ifdef __WXGTK20__
+#ifdef __WXGTK30__
     wxString home = wxGetHomeDir();
     AddSection( home, _("Home directory"), 1);
     home += wxT("/Desktop");
@@ -1448,7 +1448,7 @@ void wxDirFilterListCtrl::FillFilterList(const wxString& filter, int defaultFilt
 // wxFileIconsTable icons
 // ----------------------------------------------------------------------------
 
-#ifndef __WXGTK20__
+#ifndef __WXGTK30__
 /* Computer (c) Julian Smart */
 static const char* const file_icons_tbl_computer_xpm[] = {
 /* columns rows colors chars-per-pixel */
@@ -1578,8 +1578,8 @@ void wxFileIconsTable::Create()
                                                    wxART_CMN_DIALOG,
                                                    wxSize(16, 16)));
     // computer
-#ifdef __WXGTK20__
-    // GTK24 uses this icon in the file open dialog
+#ifdef __WXGTK30__
+    // GTK34 uses this icon in the file open dialog
     m_smallImageList->Add(wxArtProvider::GetBitmap(wxART_HARDDISK,
                                                    wxART_CMN_DIALOG,
                                                    wxSize(16, 16)));

@@ -1,4 +1,4 @@
-/* lib/wx/include/gtk2-unicode-static-2.9/wx/setup.h.  Generated from setup.h.in by configure.  */
+/* lib/wx/include/GTK3-unicode-static-2.9/wx/setup.h.  Generated from setup.h.in by configure.  */
 /* This define (__WX_SETUP_H__) is used both to ensure setup.h is included
  * only once and to indicate that we are building using configure. */
 #ifndef __WX_SETUP_H__
@@ -61,16 +61,16 @@
 /* #undef __WXGTK127__ */
 
 /* Define this if your version of GTK+ is greater than 2.0 */
-#define __WXGTK20__ 1
+#define __WXGTK30__ 1
 
 /* Define this if your version of GTK+ is greater than 2.6 */
-#define __WXGTK26__ 1
+#define __WXGTK36__ 1
 
 /* Define this if your version of GTK+ is greater than 2.10 */
-#define __WXGTK210__ 1
+#define __WXGTK310__ 1
 
 /* Define this if your version of GTK+ is greater than 2.18 */
-#define __WXGTK218__ 1
+#define __WXGTK318__ 1
 
 /* Define this if you want to use GPE features */
 /* #undef __WXGPE__ */

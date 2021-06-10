@@ -19,10 +19,10 @@ CXX_DEFINE = /define=(__WXGTK__=1)/float=ieee/name=(as_is,short)/ieee=denorm\
 CC_DEFINE = /define=(__WXGTK__=1)/float=ieee/name=(as_is,short)/ieee=denorm\
 	/incl=[-.regex]
 .else
-.ifdef __WXGTK2__
-CXX_DEFINE = /define=(__WXGTK__=1,VMS_GTK2=1)/float=ieee/name=(as_is,short)/ieee=denorm\
+.ifdef __WXGTK3__
+CXX_DEFINE = /define=(__WXGTK__=1,VMS_GTK3=1)/float=ieee/name=(as_is,short)/ieee=denorm\
 	   /assume=(nostdnew,noglobal_array_new)/incl=[-.regex]
-CC_DEFINE = /define=(__WXGTK__=1,VMS_GTK2=1)/float=ieee/name=(as_is,short)\
+CC_DEFINE = /define=(__WXGTK__=1,VMS_GTK3=1)/float=ieee/name=(as_is,short)\
 	/ieee=denorm/incl=[-.regex]
 .else
 .ifdef __WXX11__
@@ -236,7 +236,7 @@ OBJECTS_X11=accesscmn.obj,dndcmn.obj,dpycmn.obj,dseldlg.obj,\
 	combocmn.obj
 
 
-OBJECTS_GTK2=fontutilcmn.obj,cairo.obj
+OBJECTS_GTK3=fontutilcmn.obj,cairo.obj
 
 SOURCES = \
 		accelcmn.cpp,\
@@ -453,15 +453,15 @@ all : $(SOURCES)
 	library [--.lib]libwx_gtk.olb $(OBJECTS3)
 	library [--.lib]libwx_gtk.olb $(OBJECTS_X11)
 .else
-.ifdef __WXGTK2__
+.ifdef __WXGTK3__
 	$(MMS)$(MMSQUALIFIERS) $(OBJECTS_X11)
-	$(MMS)$(MMSQUALIFIERS) $(OBJECTS_GTK2)
-	library [--.lib]libwx_gtk2.olb $(OBJECTS)
-	library [--.lib]libwx_gtk2.olb $(OBJECTS1)
-	library [--.lib]libwx_gtk2.olb $(OBJECTS2)
-	library [--.lib]libwx_gtk2.olb $(OBJECTS3)
-	library [--.lib]libwx_gtk2.olb $(OBJECTS_X11)
-	library [--.lib]libwx_gtk2.olb $(OBJECTS_GTK2)
+	$(MMS)$(MMSQUALIFIERS) $(OBJECTS_GTK3)
+	library [--.lib]libwx_GTK3.olb $(OBJECTS)
+	library [--.lib]libwx_GTK3.olb $(OBJECTS1)
+	library [--.lib]libwx_GTK3.olb $(OBJECTS2)
+	library [--.lib]libwx_GTK3.olb $(OBJECTS3)
+	library [--.lib]libwx_GTK3.olb $(OBJECTS_X11)
+	library [--.lib]libwx_GTK3.olb $(OBJECTS_GTK3)
 .else
 .ifdef __WXX11__
 	$(MMS)$(MMSQUALIFIERS) $(OBJECTS_X11)
@@ -480,7 +480,7 @@ $(OBJECTS1) : [--.include.wx]setup.h
 $(OBJECTS2) : [--.include.wx]setup.h
 $(OBJECTS3) : [--.include.wx]setup.h
 $(OBJECTS_X11) : [--.include.wx]setup.h
-$(OBJECTS_GTK2) : [--.include.wx]setup.h
+$(OBJECTS_GTK3) : [--.include.wx]setup.h
 $(OBJECTS_MOTIF) : [--.include.wx]setup.h
 
 accelcmn.obj : accelcmn.cpp

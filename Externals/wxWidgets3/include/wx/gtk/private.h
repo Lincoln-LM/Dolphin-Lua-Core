@@ -14,7 +14,7 @@
 #include <gtk/gtk.h>
 
 #include "wx/gtk/private/string.h"
-#include "wx/gtk/private/gtk2-compat.h"
+#include "wx/gtk/private/GTK3-compat.h"
 
 #ifndef G_VALUE_INIT
     // introduced in GLib 2.30

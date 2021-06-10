@@ -389,7 +389,7 @@ bool wxFontBase::operator==(const wxFont& font) const
             // in wxGTK1 GetPixelSize() calls GetInternalFont() which uses
             // operator==() resulting in infinite recursion so we can't use it
             // in that port
-#if !defined(__WXGTK__) || defined(__WXGTK20__)
+#if !defined(__WXGTK__) || defined(__WXGTK30__)
             GetPixelSize() == font.GetPixelSize() &&
 #endif
             GetFamily() == font.GetFamily() &&

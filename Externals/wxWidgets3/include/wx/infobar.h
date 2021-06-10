@@ -51,10 +51,10 @@ private:
 };
 
 // currently only GTK+ has a native implementation
-#if defined(__WXGTK218__) && !defined(__WXUNIVERSAL__)
+#if defined(__WXGTK318__) && !defined(__WXUNIVERSAL__)
     #include "wx/gtk/infobar.h"
     #define wxHAS_NATIVE_INFOBAR
-#endif // wxGTK2
+#endif // wxGTK3
 
 // if the generic version is the only one we have, use it
 #ifndef wxHAS_NATIVE_INFOBAR

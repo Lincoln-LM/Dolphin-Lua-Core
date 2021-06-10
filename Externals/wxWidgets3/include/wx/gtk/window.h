@@ -117,7 +117,7 @@ public:
     virtual bool DoIsExposed( int x, int y ) const;
     virtual bool DoIsExposed( int x, int y, int w, int h ) const;
 
-    // currently wxGTK2-only
+    // currently wxGTK3-only
     void SetDoubleBuffered(bool on);
     virtual bool IsDoubleBuffered() const;
 

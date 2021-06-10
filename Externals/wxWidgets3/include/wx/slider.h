@@ -138,7 +138,7 @@ private:
     #include "wx/msw/slider.h"
 #elif defined(__WXMOTIF__)
     #include "wx/motif/slider.h"
-#elif defined(__WXGTK20__)
+#elif defined(__WXGTK30__)
     #include "wx/gtk/slider.h"
 #elif defined(__WXGTK__)
     #include "wx/gtk1/slider.h"

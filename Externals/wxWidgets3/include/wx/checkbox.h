@@ -171,7 +171,7 @@ private:
     #include "wx/msw/checkbox.h"
 #elif defined(__WXMOTIF__)
     #include "wx/motif/checkbox.h"
-#elif defined(__WXGTK20__)
+#elif defined(__WXGTK30__)
     #include "wx/gtk/checkbox.h"
 #elif defined(__WXGTK__)
     #undef wxHAS_3STATE_CHECKBOX

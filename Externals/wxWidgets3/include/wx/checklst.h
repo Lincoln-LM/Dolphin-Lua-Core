@@ -49,7 +49,7 @@ public:
     #include "wx/msw/checklst.h"
 #elif defined(__WXMOTIF__)
     #include "wx/motif/checklst.h"
-#elif defined(__WXGTK20__)
+#elif defined(__WXGTK30__)
     #include "wx/gtk/checklst.h"
 #elif defined(__WXGTK__)
     #include "wx/gtk1/checklst.h"

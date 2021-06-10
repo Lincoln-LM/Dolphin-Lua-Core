@@ -289,7 +289,7 @@ void wxGridCellEditor::Show(bool show, wxGridCellAttr *attr)
             m_control->SetBackgroundColour(attr->GetBackgroundColour());
 
 // Workaround for GTK+1 font setting problem on some platforms
-#if !defined(__WXGTK__) || defined(__WXGTK20__)
+#if !defined(__WXGTK__) || defined(__WXGTK30__)
             m_fontOld = m_control->GetFont();
             m_control->SetFont(attr->GetFont());
 #endif
@@ -314,7 +314,7 @@ void wxGridCellEditor::Show(bool show, wxGridCellAttr *attr)
         }
 
 // Workaround for GTK+1 font setting problem on some platforms
-#if !defined(__WXGTK__) || defined(__WXGTK20__)
+#if !defined(__WXGTK__) || defined(__WXGTK30__)
         if ( m_fontOld.IsOk() )
         {
             m_control->SetFont(m_fontOld);
@@ -1512,7 +1512,7 @@ void wxGridCellChoiceEditor::BeginEdit(int row, int col, wxGrid* grid)
     {
         // When dropping down the menu, a kill focus event
         // happens after this point, so we can't reset the flag yet.
-#if !defined(__WXGTK20__)
+#if !defined(__WXGTK30__)
         evtHandler->SetInSetFocus(false);
 #endif
     }
@@ -1656,7 +1656,7 @@ void wxGridCellEnumEditor::BeginEdit(int row, int col, wxGrid* grid)
     {
         // When dropping down the menu, a kill focus event
         // happens after this point, so we can't reset the flag yet.
-#if !defined(__WXGTK20__)
+#if !defined(__WXGTK30__)
         evtHandler->SetInSetFocus(false);
 #endif
     }

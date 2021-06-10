@@ -208,7 +208,7 @@ protected:
 #if wxUSE_ARTPROVIDER_TANGO
     static void InitTangoProvider();
 #endif // wxUSE_ARTPROVIDER_TANGO
-    // Initializes platform's native provider, if available (e.g. GTK2)
+    // Initializes platform's native provider, if available (e.g. GTK3)
     static void InitNativeProvider();
     // Destroy caches & all providers
     static void CleanUpProviders();
@@ -251,7 +251,7 @@ private:
 
 
 #if !defined(__WXUNIVERSAL__) && \
-    ((defined(__WXGTK__) && defined(__WXGTK20__)) || defined(__WXMSW__) || \
+    ((defined(__WXGTK__) && defined(__WXGTK30__)) || defined(__WXMSW__) || \
      defined(__WXMAC__))
   // *some* (partial) native implementation of wxArtProvider exists; this is
   // not the same as wxArtProvider::HasNativeProvider()!

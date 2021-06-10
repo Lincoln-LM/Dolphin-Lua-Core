@@ -18,10 +18,10 @@ CXX_DEFINE = /define=(__WXGTK__=1)/float=ieee/name=(as_is,short)/ieee=denorm\
 	   /assume=(nostdnew,noglobal_array_new)
 CC_DEFINE = /define=(__WXGTK__=1)/float=ieee/name=(as_is,short)/ieee=denorm
 .else
-.ifdef __WXGTK2__
-CXX_DEFINE = /define=(__WXGTK__=1,VMS_GTK2)/float=ieee/name=(as_is,short)/ieee=denorm\
+.ifdef __WXGTK3__
+CXX_DEFINE = /define=(__WXGTK__=1,VMS_GTK3)/float=ieee/name=(as_is,short)/ieee=denorm\
 	   /assume=(nostdnew,noglobal_array_new)
-CC_DEFINE = /define=(__WXGTK__=1,VMS_GTK2)/float=ieee/name=(as_is,short)/ieee=denorm
+CC_DEFINE = /define=(__WXGTK__=1,VMS_GTK3)/float=ieee/name=(as_is,short)/ieee=denorm
 .else
 .ifdef __WXX11__
 CXX_DEFINE = /define=(__WXX11__=1,__WXUNIVERSAL__==1)/float=ieee\
@@ -93,8 +93,8 @@ all : $(SOURCES)
 .ifdef __WXGTK__
 	library [--.lib]libwx_gtk.olb $(OBJECTS)
 .else
-.ifdef __WXGTK2__
-	library [--.lib]libwx_gtk2.olb $(OBJECTS)
+.ifdef __WXGTK3__
+	library [--.lib]libwx_GTK3.olb $(OBJECTS)
 .else
 .ifdef __WXX11__
 	library [--.lib]libwx_x11_univ.olb $(OBJECTS)

@@ -20,7 +20,7 @@
 // FIXME: right now only wxMSW, wxGTK and wxOSX implement bitmap support in wxButton
 //        itself, this shouldn't be used for the other platforms neither
 //        when all of them do it
-#if (defined(__WXMSW__) || defined(__WXGTK20__) || defined(__WXOSX__)) && !defined(__WXUNIVERSAL__)
+#if (defined(__WXMSW__) || defined(__WXGTK30__) || defined(__WXOSX__)) && !defined(__WXUNIVERSAL__)
     #define wxHAS_BUTTON_BITMAP
 #endif
 
@@ -127,7 +127,7 @@ protected:
     #include "wx/msw/bmpbuttn.h"
 #elif defined(__WXMOTIF__)
     #include "wx/motif/bmpbuttn.h"
-#elif defined(__WXGTK20__)
+#elif defined(__WXGTK30__)
     #include "wx/gtk/bmpbuttn.h"
 #elif defined(__WXGTK__)
     #include "wx/gtk1/bmpbuttn.h"

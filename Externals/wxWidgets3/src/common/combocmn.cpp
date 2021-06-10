@@ -156,7 +156,7 @@ wxCONSTRUCTOR_5( wxComboBox, wxWindow*, Parent, wxWindowID, Id, \
 #define wxCC_GENERIC_TLW_IS_DIALOG
 #define wxComboCtrlGenericTLW   wxDialog
 
-#if defined(__WXGTK20__)
+#if defined(__WXGTK30__)
 # include "wx/gtk/private.h"
 #else
 # include "wx/gtk1/private.h"

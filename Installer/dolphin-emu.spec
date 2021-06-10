@@ -42,7 +42,7 @@ Source0:    %{name}-%{version}.tar.xz
 BuildRequires:  desktop-file-utils
 BuildRequires:  cmake >= 2.8
 BuildRequires:  gcc-c++
-BuildRequires:  gtk2-devel
+BuildRequires:  GTK3-devel
 BuildRequires:  pkgconfig(alsa)
 BuildRequires:  pkgconfig(ao)
 BuildRequires:  pkgconfig(bluez)

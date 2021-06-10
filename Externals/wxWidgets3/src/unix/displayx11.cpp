@@ -38,7 +38,7 @@
 
 #include "wx/display_impl.h"
 
-#ifdef __WXGTK20__
+#ifdef __WXGTK30__
     #include <gdk/gdk.h>
     #include <gdk/gdkx.h>
 
@@ -84,7 +84,7 @@ protected:
     int m_num;
 };
 
-#ifdef __WXGTK20__
+#ifdef __WXGTK30__
 
 class ScreensInfo : public ScreensInfoBase
 {
@@ -370,7 +370,7 @@ bool wxDisplayImplX11::ChangeMode(const wxVideoMode& WXUNUSED(mode))
 /* static */ wxDisplayFactory *wxDisplay::CreateFactory()
 {
     // GTK+ screen functions are always available, no need to check for them
-#ifndef __WXGTK20__
+#ifndef __WXGTK30__
     if ( !XineramaIsActive((Display*)wxGetDisplay()) )
         return new wxDisplayFactorySingle;
 #endif

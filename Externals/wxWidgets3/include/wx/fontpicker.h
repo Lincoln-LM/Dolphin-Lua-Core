@@ -68,8 +68,8 @@ protected:
 #define wxFONTBTN_DEFAULT_STYLE \
     (wxFNTP_FONTDESC_AS_LABEL | wxFNTP_USEFONT_FOR_LABEL)
 
-// native version currently only exists in wxGTK2
-#if defined(__WXGTK20__) && !defined(__WXUNIVERSAL__)
+// native version currently only exists in wxGTK3
+#if defined(__WXGTK30__) && !defined(__WXUNIVERSAL__)
     #include "wx/gtk/fontpicker.h"
     #define wxFontPickerWidget      wxFontButton
 #else

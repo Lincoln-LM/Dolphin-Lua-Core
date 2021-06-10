@@ -42,7 +42,7 @@
 
 #include "pango/pango.h"
 
-#ifdef __WXGTK20__
+#ifdef __WXGTK30__
     #include "wx/gtk/private.h"
     extern GtkWidget *wxGetRootWindow();
 
@@ -172,14 +172,14 @@ wxFontFamily wxNativeFontInfo::GetFamily() const
         ret = wxFONTFAMILY_TELETYPE;    // begins with "Monospace"
     else if (wxStrnicmp( family_text, "courier", 7 ) == 0)
         ret = wxFONTFAMILY_TELETYPE;    // begins with "Courier"
-#if defined(__WXGTK20__) || defined(HAVE_PANGO_FONT_FAMILY_IS_MONOSPACE)
+#if defined(__WXGTK30__) || defined(HAVE_PANGO_FONT_FAMILY_IS_MONOSPACE)
     else
     {
         PangoFontFamily **families;
         PangoFontFamily  *family = NULL;
         int n_families;
         pango_context_list_families(
-#ifdef __WXGTK20__
+#ifdef __WXGTK30__
                 gtk_widget_get_pango_context( wxGetRootWindow() ),
 #else
                 wxTheApp->GetPangoContext(),

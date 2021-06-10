@@ -1882,7 +1882,7 @@ inline void wxWindowBase::SetInitialBestSize(const wxSize& size)
     #include "wx/msw/window.h"
 #elif defined(__WXMOTIF__)
     #include "wx/motif/window.h"
-#elif defined(__WXGTK20__)
+#elif defined(__WXGTK30__)
     #ifdef __WXUNIVERSAL__
         #define wxWindowNative wxWindowGTK
     #else // !wxUniv

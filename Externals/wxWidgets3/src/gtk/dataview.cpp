@@ -36,7 +36,7 @@
 #include "wx/gtk/private.h"
 #include "wx/gtk/private/event.h"
 #include "wx/gtk/private/gdkconv.h"
-#include "wx/gtk/private/gtk2-compat.h"
+#include "wx/gtk/private/GTK3-compat.h"
 #include "wx/gtk/private/list.h"
 using namespace wxGTKImpl;
 
@@ -4540,7 +4540,7 @@ bool wxDataViewCtrl::Create(wxWindow *parent,
 
     gtk_tree_view_set_headers_visible( GTK_TREE_VIEW(m_treeview), (style & wxDV_NO_HEADER) == 0 );
 
-#ifdef __WXGTK210__
+#ifdef __WXGTK310__
 #ifndef __WXGTK3__
     if (!gtk_check_version(2,10,0))
 #endif

@@ -24,10 +24,10 @@ CXX_DEFINE = /define=(__WXX11__=1,__WXUNIVERSAL__==1)/float=ieee\
 CC_DEFINE = /define=(__WXX11__=1,__WXUNIVERSAL__==1)/float=ieee\
 	/name=(as_is,short)
 .else
-.ifdef __WXGTK2__
-CXX_DEFINE = /define=(__WXGTK__=1,VMS_GTK2==1)/float=ieee\
+.ifdef __WXGTK3__
+CXX_DEFINE = /define=(__WXGTK__=1,VMS_GTK3==1)/float=ieee\
 	/name=(as_is,short)/assume=(nostdnew,noglobal_array_new)
-CC_DEFINE = /define=(__WX_GTK__=1,VMS_GTK2==1)/float=ieee\
+CC_DEFINE = /define=(__WX_GTK__=1,VMS_GTK3==1)/float=ieee\
 	/name=(as_is,short)
 .else
 CXX_DEFINE =
@@ -203,9 +203,9 @@ all : $(SOURCES)
 	library/crea [--.lib]libwx_gtk.olb $(OBJECTS)
 	library [--.lib]libwx_gtk.olb $(OBJECTS0)
 .else
-.ifdef __WXGTK2__
-	library/crea [--.lib]libwx_gtk2.olb $(OBJECTS)
-	library [--.lib]libwx_gtk2.olb $(OBJECTS0)
+.ifdef __WXGTK3__
+	library/crea [--.lib]libwx_GTK3.olb $(OBJECTS)
+	library [--.lib]libwx_GTK3.olb $(OBJECTS0)
 .else
 .ifdef __WXX11__
 	library/crea [--.lib]libwx_x11_univ.olb $(OBJECTS)

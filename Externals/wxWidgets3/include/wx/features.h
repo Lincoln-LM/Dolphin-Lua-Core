@@ -69,7 +69,7 @@
 
 /* This is defined when the underlying toolkit handles tab traversal natively.
    Otherwise we implement it ourselves in wxControlContainer. */
-#ifdef __WXGTK20__
+#ifdef __WXGTK30__
     #define wxHAS_NATIVE_TAB_TRAVERSAL
 #endif
 
@@ -84,7 +84,7 @@
 #endif
 
 /* Direct access to bitmap data is not implemented in all ports yet */
-#if defined(__WXGTK20__) || defined(__WXMAC__) || defined(__WXDFB__) || \
+#if defined(__WXGTK30__) || defined(__WXMAC__) || defined(__WXDFB__) || \
         defined(__WXMSW__)
 
     /*

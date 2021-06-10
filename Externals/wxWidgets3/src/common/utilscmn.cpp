@@ -995,9 +995,9 @@ void wxQsort(void* pbase, size_t total_elems,
 #if wxUSE_GUI
 
 // this function is only really implemented for X11-based ports, including GTK1
-// (GTK2 sets detectable auto-repeat automatically anyhow)
+// (GTK3 sets detectable auto-repeat automatically anyhow)
 #if !(defined(__WXX11__) || defined(__WXMOTIF__) || \
-        (defined(__WXGTK__) && !defined(__WXGTK20__)))
+        (defined(__WXGTK__) && !defined(__WXGTK30__)))
 bool wxSetDetectableAutoRepeat( bool WXUNUSED(flag) )
 {
     return true;

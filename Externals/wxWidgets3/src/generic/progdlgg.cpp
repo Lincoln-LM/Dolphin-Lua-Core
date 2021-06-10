@@ -403,7 +403,7 @@ wxGenericProgressDialog::CreateLabel(const wxString& text, wxSizer *sizer)
     // value and time to the left in two rows
     sizer->Add(label, 1, wxALIGN_LEFT);
     sizer->Add(value, 1, wxALIGN_LEFT);
-#elif defined(__WXMSW__) || defined(__WXPM__) || defined(__WXMAC__) || defined(__WXGTK20__)
+#elif defined(__WXMSW__) || defined(__WXPM__) || defined(__WXMAC__) || defined(__WXGTK30__)
     // value and time centered in one row
     sizer->Add(label, 1, wxLARGESMALL(wxALIGN_RIGHT,wxALIGN_LEFT) | wxTOP | wxRIGHT, LAYOUT_MARGIN);
     sizer->Add(value, 1, wxALIGN_LEFT | wxTOP, LAYOUT_MARGIN);

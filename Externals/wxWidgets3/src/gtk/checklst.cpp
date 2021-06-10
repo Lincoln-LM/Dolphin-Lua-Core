@@ -2,7 +2,7 @@
 // Name:        src/gtk/checklst.cpp
 // Purpose:
 // Author:      Robert Roebling
-// Modified by: Ryan Norton (Native GTK2.0+ checklist)
+// Modified by: Ryan Norton (Native GTK3.0+ checklist)
 // Copyright:   (c) 1998 Robert Roebling
 // Licence:     wxWindows licence
 /////////////////////////////////////////////////////////////////////////////

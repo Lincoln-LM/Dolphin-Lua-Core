@@ -47,7 +47,7 @@
 
 #ifdef __WXGTK3__
     #include "wx/gtk/dc.h"
-#elif defined __WXGTK20__
+#elif defined __WXGTK30__
     #include "wx/gtk/dcclient.h"
     #include "wx/gtk/dcmemory.h"
     #include "wx/gtk/dcscreen.h"

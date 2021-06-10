@@ -41,7 +41,7 @@ void wxFileHistory::AddFileToHistory(const wxString& file)
 {
     wxFileHistoryBase::AddFileToHistory(file);
 
-#ifdef __WXGTK210__
+#ifdef __WXGTK310__
     const wxString fullPath = wxFileName(file).GetFullPath();
 #ifndef __WXGTK3__
     if ( !gtk_check_version(2,10,0) )

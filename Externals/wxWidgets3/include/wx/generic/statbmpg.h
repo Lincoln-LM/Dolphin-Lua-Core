@@ -51,7 +51,7 @@ public:
         Refresh();
     }
 
-#if defined(__WXGTK20__) || defined(__WXMAC__)
+#if defined(__WXGTK30__) || defined(__WXMAC__)
     // icons and bitmaps are really the same thing in wxGTK and wxMac
     wxIcon GetIcon() const  { return (const wxIcon &)m_bitmap; }
 #endif

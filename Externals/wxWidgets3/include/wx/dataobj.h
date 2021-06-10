@@ -75,7 +75,7 @@ public:
     #include "wx/msw/ole/dataform.h"
 #elif defined(__WXMOTIF__)
     #include "wx/motif/dataform.h"
-#elif defined(__WXGTK20__)
+#elif defined(__WXGTK30__)
     #include "wx/gtk/dataform.h"
 #elif defined(__WXGTK__)
     #include "wx/gtk1/dataform.h"
@@ -165,7 +165,7 @@ public:
     #include "wx/motif/dataobj.h"
 #elif defined(__WXX11__)
     #include "wx/x11/dataobj.h"
-#elif defined(__WXGTK20__)
+#elif defined(__WXGTK30__)
     #include "wx/gtk/dataobj.h"
 #elif defined(__WXGTK__)
     #include "wx/gtk1/dataobj.h"
@@ -326,7 +326,7 @@ private:
 // ----------------------------------------------------------------------------
 
 #if wxUSE_UNICODE
-    #if defined(__WXGTK20__)
+    #if defined(__WXGTK30__)
         #define wxNEEDS_UTF8_FOR_TEXT_DATAOBJ
     #elif defined(__WXMAC__)
         #define wxNEEDS_UTF16_FOR_TEXT_DATAOBJ
@@ -551,7 +551,7 @@ private:
 #if defined(__WXMSW__)
     #include "wx/msw/ole/dataobj2.h"
     // wxURLDataObject defined in msw/ole/dataobj2.h
-#elif defined(__WXGTK20__)
+#elif defined(__WXGTK30__)
     #include "wx/gtk/dataobj2.h"
     // wxURLDataObject defined in msw/ole/dataobj2.h
 

@@ -154,7 +154,7 @@ void wxControl::GTKSetLabelWithMarkupForLabel(GtkLabel *w, const wxString& label
 // ----------------------------------------------------------------------------
 // GtkFrame helpers
 //
-// GtkFrames do in fact support mnemonics in GTK2+ but not through
+// GtkFrames do in fact support mnemonics in GTK3+ but not through
 // gtk_frame_set_label, rather you need to use a custom label widget
 // instead (idea gleaned from the native gtk font dialog code in GTK)
 // ----------------------------------------------------------------------------

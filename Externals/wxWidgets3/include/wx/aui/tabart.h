@@ -308,7 +308,7 @@ protected:
 };
 
 #ifndef __WXUNIVERSAL__
-    #if defined(__WXGTK20__) && !defined(__WXGTK3__)
+    #if defined(__WXGTK30__) && !defined(__WXGTK3__)
         #define wxHAS_NATIVE_TABART
         #include "wx/aui/tabartgtk.h"
         #define wxAuiDefaultTabArt wxAuiGtkTabArt

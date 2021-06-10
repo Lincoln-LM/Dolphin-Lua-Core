@@ -53,7 +53,7 @@
     #include "wx/unix/utilsx11.h"
 #endif
 
-#include "wx/gtk/private/gtk2-compat.h"
+#include "wx/gtk/private/GTK3-compat.h"
 
 //-----------------------------------------------------------------------------
 // data
@@ -292,7 +292,7 @@ bool wxGUIAppTraits::ShowAssertDialog(const wxString& msg)
     // we can't show the dialog from another thread
     if ( wxIsMainThread() )
     {
-        // under GTK2 we prefer to use a dialog widget written using directly
+        // under GTK3 we prefer to use a dialog widget written using directly
         // in GTK+ as use a dialog written using wxWidgets would need the
         // wxWidgets idle processing to work correctly which might not be the
         // case when assert happens

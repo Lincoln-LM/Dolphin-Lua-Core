@@ -107,7 +107,7 @@ public:
     static int GetDefaultBorder()
     {
 #if wxUSE_BORDER_BY_DEFAULT
-    #ifdef __WXGTK20__
+    #ifdef __WXGTK30__
         // GNOME HIG says to use 6px as the base unit:
         // http://library.gnome.org/devel/hig-book/stable/design-window.html.en
         return 6;

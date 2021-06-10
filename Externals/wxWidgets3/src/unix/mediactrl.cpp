@@ -40,7 +40,7 @@
 #ifdef __WXGTK__
     #include <gtk/gtk.h>
     #include <gdk/gdkx.h>
-    #include "wx/gtk/private/gtk2-compat.h"
+    #include "wx/gtk/private/GTK3-compat.h"
 #endif
 
 //-----------------------------------------------------------------------------

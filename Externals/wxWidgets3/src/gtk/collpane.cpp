@@ -25,7 +25,7 @@
 
 #include <gtk/gtk.h>
 #include "wx/gtk/private.h"
-#include "wx/gtk/private/gtk2-compat.h"
+#include "wx/gtk/private/GTK3-compat.h"
 
 // the lines below duplicate the same definitions in collpaneg.cpp, if we have
 // another implementation of this class we should extract them to a common file

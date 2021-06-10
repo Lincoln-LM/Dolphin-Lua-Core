@@ -54,7 +54,7 @@ static Atom _NET_WM_WINDOW_TYPE_NORMAL = 0;
 static Atom _KDE_NET_WM_WINDOW_TYPE_OVERRIDE = 0;
 static Atom _WIN_LAYER = 0;
 static Atom KWIN_RUNNING = 0;
-#ifndef __WXGTK20__
+#ifndef __WXGTK30__
 static Atom _NET_SUPPORTING_WM_CHECK = 0;
 static Atom _NET_SUPPORTED = 0;
 #endif
@@ -270,7 +270,7 @@ static void wxWinHintsSetLayer(Display *display, Window rootWnd,
 
 
 
-#ifdef __WXGTK20__
+#ifdef __WXGTK30__
 static bool wxQueryWMspecSupport(Display* WXUNUSED(display),
                                  Window WXUNUSED(rootWnd),
                                  Atom (feature))

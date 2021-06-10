@@ -39,7 +39,7 @@
 
 #include <gtk/gtk.h>
 #include "wx/gtk/private.h"
-#include "wx/gtk/private/gtk2-compat.h"
+#include "wx/gtk/private/GTK3-compat.h"
 #include "wx/gtk/private/event.h"
 #include "wx/gtk/private/win_gtk.h"
 #include "wx/private/textmeasure.h"
@@ -1404,7 +1404,7 @@ gtk_window_button_press_callback( GtkWidget* WXUNUSED_IN_GTK3(widget),
             }
 #endif // !__WXGTK3__
             break;
-        // we shouldn't get triple clicks at all for GTK2 because we
+        // we shouldn't get triple clicks at all for GTK3 because we
         // suppress them artificially using the code above but we still
         // should map them to something for GTK3 and not just ignore them
         // as this would lose clicks

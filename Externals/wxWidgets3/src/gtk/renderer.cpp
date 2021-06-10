@@ -39,7 +39,7 @@
 
 #include <gtk/gtk.h>
 #include "wx/gtk/private.h"
-#include "wx/gtk/private/gtk2-compat.h"
+#include "wx/gtk/private/GTK3-compat.h"
 
 // ----------------------------------------------------------------------------
 // wxRendererGTK: our wxRendererNative implementation

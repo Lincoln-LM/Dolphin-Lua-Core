@@ -14,7 +14,7 @@
 #if wxUSE_STATLINE
 
 #include <gtk/gtk.h>
-#include "wx/gtk/private/gtk2-compat.h"
+#include "wx/gtk/private/GTK3-compat.h"
 
 //-----------------------------------------------------------------------------
 // wxStaticLine

@@ -44,7 +44,7 @@
 #endif
 
 #include "wx/gtk/private.h"
-#include "wx/gtk/private/gtk2-compat.h"
+#include "wx/gtk/private/GTK3-compat.h"
 #include "wx/gtk/private/win_gtk.h"
 
 #if wxUSE_LIBHILDON
@@ -1502,7 +1502,7 @@ bool wxTopLevelWindowGTK::SetTransparent(wxByte alpha)
     Display* dpy = GDK_WINDOW_XDISPLAY(window);
     Window win = GDK_WINDOW_XID(window);
 
-    // Using pure Xlib to not have a GTK version check mess due to gtk2.0 not having GdkDisplay
+    // Using pure Xlib to not have a GTK version check mess due to GTK3.0 not having GdkDisplay
     if (alpha == 0xff)
         XDeleteProperty(dpy, win, XInternAtom(dpy, "_NET_WM_WINDOW_OPACITY", False));
     else

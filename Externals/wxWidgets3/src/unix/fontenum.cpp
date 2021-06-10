@@ -43,10 +43,10 @@
 
 #include "pango/pango.h"
 
-#ifdef __WXGTK20__
+#ifdef __WXGTK30__
 #include "gtk/gtk.h"
 extern GtkWidget *wxGetRootWindow();
-#endif // __WXGTK20__
+#endif // __WXGTK30__
 
 extern "C"
 {
@@ -73,7 +73,7 @@ bool wxFontEnumerator::EnumerateFacenames(wxFontEncoding encoding,
     PangoFontFamily **families = NULL;
     gint n_families = 0;
     pango_context_list_families (
-#ifdef __WXGTK20__
+#ifdef __WXGTK30__
         gtk_widget_get_pango_context( wxGetRootWindow() ),
 #else
         wxTheApp->GetPangoContext(),
@@ -83,7 +83,7 @@ bool wxFontEnumerator::EnumerateFacenames(wxFontEncoding encoding,
 
     for ( int i = 0; i < n_families; i++ )
     {
-#if defined(__WXGTK20__) || defined(HAVE_PANGO_FONT_FAMILY_IS_MONOSPACE)
+#if defined(__WXGTK30__) || defined(HAVE_PANGO_FONT_FAMILY_IS_MONOSPACE)
         if ( !fixedWidthOnly ||
             pango_font_family_is_monospace(families[i]) )
 #endif

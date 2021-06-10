@@ -1652,7 +1652,7 @@ wxCairoContext::wxCairoContext( wxGraphicsRenderer* renderer, const wxPrinterDC&
     Init( cairo_create(m_mswSurface) );
 #endif
 
-#ifdef __WXGTK20__
+#ifdef __WXGTK30__
     const wxDCImpl *impl = dc.GetImpl();
     cairo_t* cr = static_cast<cairo_t*>(impl->GetCairoContext());
     if (cr)
@@ -1703,7 +1703,7 @@ wxCairoContext::wxCairoContext( wxGraphicsRenderer* renderer, const wxWindowDC& 
     cairo_t* cr = static_cast<cairo_t*>(dc.GetImpl()->GetCairoContext());
     if (cr)
         Init(cairo_reference(cr));
-#elif defined __WXGTK20__
+#elif defined __WXGTK30__
     wxGTKDCImpl *impldc = (wxGTKDCImpl*) dc.GetImpl();
     Init( gdk_cairo_create( impldc->GetGDKWindow() ) );
 
@@ -1778,7 +1778,7 @@ wxCairoContext::wxCairoContext( wxGraphicsRenderer* renderer, const wxMemoryDC& 
     cairo_t* cr = static_cast<cairo_t*>(dc.GetImpl()->GetCairoContext());
     if (cr)
         Init(cairo_reference(cr));
-#elif defined __WXGTK20__
+#elif defined __WXGTK30__
     wxGTKDCImpl *impldc = (wxGTKDCImpl*) dc.GetImpl();
     Init( gdk_cairo_create( impldc->GetGDKWindow() ) );
 
@@ -1807,7 +1807,7 @@ wxCairoContext::wxCairoContext( wxGraphicsRenderer* renderer, const wxMemoryDC& 
 #endif
 }
 
-#ifdef __WXGTK20__
+#ifdef __WXGTK30__
 wxCairoContext::wxCairoContext( wxGraphicsRenderer* renderer, GdkWindow *window )
 : wxGraphicsContext(renderer)
 {

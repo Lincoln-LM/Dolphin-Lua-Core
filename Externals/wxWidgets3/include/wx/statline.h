@@ -86,7 +86,7 @@ protected:
     #include "wx/univ/statline.h"
 #elif defined(__WXMSW__)
     #include "wx/msw/statline.h"
-#elif defined(__WXGTK20__)
+#elif defined(__WXGTK30__)
     #include "wx/gtk/statline.h"
 #elif defined(__WXGTK__)
     #include "wx/gtk1/statline.h"

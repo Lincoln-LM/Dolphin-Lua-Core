@@ -44,7 +44,7 @@
 #ifdef __WXGTK__
     #include <gtk/gtk.h>
     #if GTK_CHECK_VERSION(2,0,0)
-        #include "wx/gtk/private/gtk2-compat.h"
+        #include "wx/gtk/private/GTK3-compat.h"
     #else
         #define gtk_widget_get_window(x) x->window
     #endif

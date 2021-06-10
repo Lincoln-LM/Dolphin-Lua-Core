@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 // Name:        wx/gtk/taskbar.h
-// Purpose:     wxTaskBarIcon class for GTK2
+// Purpose:     wxTaskBarIcon class for GTK3
 // Author:      Paul Cornett
 // Created:     2009-02-08
 // Copyright:   (c) 2009 Paul Cornett

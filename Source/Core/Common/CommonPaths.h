@@ -35,11 +35,7 @@
 #elif defined ANDROID
 	#define SYSDATA_DIR "/sdcard/dolphin-emu"
 #else
-	#ifdef DATA_DIR
-		#define SYSDATA_DIR DATA_DIR "sys"
-	#else
-		#define SYSDATA_DIR "sys"
-	#endif
+	#define SYSDATA_DIR "Sys"
 #endif
 
 // Dirs in both User and Sys

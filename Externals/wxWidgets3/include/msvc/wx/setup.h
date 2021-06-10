@@ -98,7 +98,7 @@
 // with MSVC.
 #ifndef wxTOOLKIT_PREFIX
     #if defined(__WXGTK__)
-        #define wxTOOLKIT_PREFIX gtk2
+        #define wxTOOLKIT_PREFIX GTK3
     #else
         #define wxTOOLKIT_PREFIX msw
     #endif

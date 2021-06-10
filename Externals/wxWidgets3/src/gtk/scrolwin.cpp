@@ -19,7 +19,7 @@
 #include "wx/scrolwin.h"
 
 #include <gtk/gtk.h>
-#include "wx/gtk/private/gtk2-compat.h"
+#include "wx/gtk/private/GTK3-compat.h"
 
 // ----------------------------------------------------------------------------
 // wxScrollHelper implementation

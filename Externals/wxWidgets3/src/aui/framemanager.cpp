@@ -82,7 +82,7 @@ IMPLEMENT_CLASS(wxAuiManager, wxEvtHandler)
 
 const int auiToolBarLayer = 10;
 
-#ifndef __WXGTK20__
+#ifndef __WXGTK30__
 
 
 class wxPseudoTransparentFrame : public wxFrame
@@ -220,10 +220,10 @@ END_EVENT_TABLE()
 
 
 #else
-  // __WXGTK20__
+  // __WXGTK30__
 
 #include <gtk/gtk.h>
-#include "wx/gtk/private/gtk2-compat.h"
+#include "wx/gtk/private/GTK3-compat.h"
 
 static void
 gtk_pseudo_window_realized_callback( GtkWidget *m_widget, void *WXUNUSED(win) )
@@ -295,7 +295,7 @@ private:
 IMPLEMENT_DYNAMIC_CLASS(wxPseudoTransparentFrame, wxFrame)
 
 #endif
- // __WXGTK20__
+ // __WXGTK30__
 
 
 

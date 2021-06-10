@@ -26,10 +26,10 @@
     #include "wx/control.h"
 #endif
 
-#ifdef __WXGTK20__
+#ifdef __WXGTK30__
     #include <gtk/gtk.h>
     #include "wx/gtk/private.h"
-    #include "wx/gtk/private/gtk2-compat.h"
+    #include "wx/gtk/private/GTK3-compat.h"
 #endif
 
 // we only have to do it here when we use wxStatusBarGeneric in addition to the
@@ -53,7 +53,7 @@
 // GTK+ signal handler
 // ----------------------------------------------------------------------------
 
-#if defined( __WXGTK20__ )
+#if defined( __WXGTK30__ )
 #if GTK_CHECK_VERSION(2,12,0)
 extern "C" {
 static
@@ -90,7 +90,7 @@ gboolean statusbar_query_tooltip(GtkWidget*   WXUNUSED(widget),
 BEGIN_EVENT_TABLE(wxStatusBarGeneric, wxWindow)
     EVT_PAINT(wxStatusBarGeneric::OnPaint)
     EVT_SIZE(wxStatusBarGeneric::OnSize)
-#ifdef __WXGTK20__
+#ifdef __WXGTK30__
     EVT_LEFT_DOWN(wxStatusBarGeneric::OnLeftDown)
     EVT_RIGHT_DOWN(wxStatusBarGeneric::OnRightDown)
 #endif
@@ -132,7 +132,7 @@ bool wxStatusBarGeneric::Create(wxWindow *parent,
 
     SetFieldsCount(1);
 
-#if defined( __WXGTK20__ )
+#if defined( __WXGTK30__ )
 #if GTK_CHECK_VERSION(2,12,0)
     if (HasFlag(wxSTB_SHOW_TIPS)
 #ifndef __WXGTK3__
@@ -428,7 +428,7 @@ void wxStatusBarGeneric::OnPaint(wxPaintEvent& WXUNUSED(event) )
 {
     wxPaintDC dc(this);
 
-#ifdef __WXGTK20__
+#ifdef __WXGTK30__
     // Draw grip first
     if ( ShowsSizeGrip() )
     {
@@ -465,7 +465,7 @@ void wxStatusBarGeneric::OnPaint(wxPaintEvent& WXUNUSED(event) )
                             rc.x, rc.y, rc.width, rc.height );
 #endif
     }
-#endif // __WXGTK20__
+#endif // __WXGTK30__
 
     if (GetFont().IsOk())
         dc.SetFont(GetFont());
@@ -486,7 +486,7 @@ void wxStatusBarGeneric::OnSysColourChanged(wxSysColourChangedEvent& event)
     wxWindow::OnSysColourChanged(event);
 }
 
-#ifdef __WXGTK20__
+#ifdef __WXGTK30__
 void wxStatusBarGeneric::OnLeftDown(wxMouseEvent& event)
 {
     int width, height;
@@ -569,7 +569,7 @@ void wxStatusBarGeneric::OnRightDown(wxMouseEvent& event)
         event.Skip( true );
     }
 }
-#endif // __WXGTK20__
+#endif // __WXGTK30__
 
 void wxStatusBarGeneric::OnSize(wxSizeEvent& event)
 {

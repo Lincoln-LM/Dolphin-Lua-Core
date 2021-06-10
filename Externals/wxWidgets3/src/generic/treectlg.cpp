@@ -992,7 +992,7 @@ bool wxGenericTreeCtrl::Create(wxWindow *parent,
         style |= wxTR_NO_LINES;
 #endif // __WXMAC__
 
-#ifdef __WXGTK20__
+#ifdef __WXGTK30__
     if (style & wxTR_HAS_BUTTONS)
         style |= wxTR_NO_LINES;
 #endif
@@ -2603,7 +2603,7 @@ void wxGenericTreeCtrl::PaintItem(wxGenericTreeItem *item, wxDC& dc)
                          item->GetY() + offset,
                          item->GetWidth() - state_w - image_w + 2,
                          total_h - offset );
-#if !defined(__WXGTK20__) && !defined(__WXMAC__)
+#if !defined(__WXGTK30__) && !defined(__WXMAC__)
             dc.DrawRectangle( rect );
 #else
             rect.x -= 1;
@@ -3689,7 +3689,7 @@ void wxGenericTreeCtrl::OnMouse( wxMouseEvent &event )
             // highlight the current drop target if any
             DrawDropEffect(m_dropTarget);
 
-#if defined(__WXMSW__) || defined(__WXMAC__) || defined(__WXGTK20__)
+#if defined(__WXMSW__) || defined(__WXMAC__) || defined(__WXGTK30__)
             Update();
 #else
             // TODO: remove this call or use wxEventLoopBase::GetActive()->YieldFor(wxEVT_CATEGORY_UI)
@@ -3724,7 +3724,7 @@ void wxGenericTreeCtrl::OnMouse( wxMouseEvent &event )
 
         SetCursor(m_oldCursor);
 
-#if defined( __WXMSW__ ) || defined(__WXMAC__) || defined(__WXGTK20__)
+#if defined( __WXMSW__ ) || defined(__WXMAC__) || defined(__WXGTK30__)
         Update();
 #else
         // TODO: remove this call or use wxEventLoopBase::GetActive()->YieldFor(wxEVT_CATEGORY_UI)

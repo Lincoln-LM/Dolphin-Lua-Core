@@ -2486,7 +2486,7 @@ void wxStaticBoxSizer::RecalcSizes()
     wxPoint old_pos( m_position );
     if (m_staticBox->GetChildren().GetCount() > 0)
     {
-#if defined( __WXGTK20__ )
+#if defined( __WXGTK30__ )
         // if the wxStaticBox has created a wxPizza to contain its children
         // (see wxStaticBox::AddChild) then we need to place the items it contains
         // in the wxBoxSizer::RecalcSizes() call below using coordinates relative
@@ -2683,7 +2683,7 @@ void wxStdDialogButtonSizer::Realize()
 
         // Extra space around and at the right
         Add(12, 40);
-#elif defined(__WXGTK20__)
+#elif defined(__WXGTK30__)
         // http://library.gnome.org/devel/hig-book/stable/windows-alert.html.en
         // says that the correct button order is
         //

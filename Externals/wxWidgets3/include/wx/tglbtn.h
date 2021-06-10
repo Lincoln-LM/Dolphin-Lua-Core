@@ -78,7 +78,7 @@ protected:
 #elif defined(__WXMSW__)
     #include "wx/msw/tglbtn.h"
     #define wxHAS_BITMAPTOGGLEBUTTON
-#elif defined(__WXGTK20__)
+#elif defined(__WXGTK30__)
     #include "wx/gtk/tglbtn.h"
     #define wxHAS_BITMAPTOGGLEBUTTON
 #elif defined(__WXGTK__)

@@ -19,7 +19,7 @@
 #include "wx/stockitem.h"
 
 #include <gtk/gtk.h>
-#include "wx/gtk/private/gtk2-compat.h"
+#include "wx/gtk/private/GTK3-compat.h"
 
 // ----------------------------------------------------------------------------
 // GTK callbacks
@@ -368,7 +368,7 @@ void wxAnyButton::DoSetBitmap(const wxBitmap& bitmap, State which)
 
 void wxAnyButton::DoSetBitmapPosition(wxDirection dir)
 {
-#ifdef __WXGTK210__
+#ifdef __WXGTK310__
     if ( !gtk_check_version(2,10,0) )
     {
         GtkPositionType gtkpos;

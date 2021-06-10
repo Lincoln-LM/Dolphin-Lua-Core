@@ -1657,9 +1657,9 @@
 // GTK-specific options used when not using configure. As we can't test for the
 // exact GTK version (without including GTK+ headers that we don't want to
 // include from our own public headers), just assume a recent GTK 2.x.
-#define __WXGTK20__
-#define __WXGTK210__
-#define __WXGTK218__
+#define __WXGTK30__
+#define __WXGTK310__
+#define __WXGTK318__
 //#define __WXGTK3__
 
 #endif // _WX_SETUP_H_

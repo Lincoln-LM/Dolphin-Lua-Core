@@ -895,7 +895,7 @@ elseif(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
 		png
 		${GTHREAD2_LIBRARIES}
 		${PANGOCAIRO_LIBRARIES}
-		${GTK2_LIBRARIES})
+		${GTK3_LIBRARIES})
 else()
 	add_definitions(-D__WXMSW__)
 	set(SRCS
