@@ -7,5 +7,5 @@ build:
   project: Source\dolphin-emu.sln
 
 artifacts:
-- path: '**\*.exe' # find all exes recursively
-  name: exes
+- path: Binary\x64
+  name: x64
