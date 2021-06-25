@@ -5,3 +5,7 @@ install:
 
 build:
   project: Source\dolphin-emu.sln
+
+artifacts:
+- path: '**\*.exe' # find all exes recursively
+  name: exes
