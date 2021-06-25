@@ -2,6 +2,18 @@
 
 This project adds Lua support and TAStudio interface in the revision 5.0 of Dolphin Emulator. The Lua API is based on Dragonbane0's Zelda Edition, which can be found [here](https://github.com/dragonbane0/dolphin).
 
+### Linux Portable Build Steps:
+
+Can be stored on external storage and used on different Linux systems.
+Or useful for having multiple distinct Dolphin setups for testing/development/TAS.
+
+1. `mkdir Build`
+2. `cd Build`
+3. `cmake .. -DLINUX_LOCAL_DEV=true`
+4. `make`
+5. `cp -r ../Data/Sys/ Binaries/`
+6. `touch Binaries/portable.txt`
+
 ## Lua Core
 
 ### Running scripts

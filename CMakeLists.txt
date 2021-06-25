@@ -869,7 +869,7 @@ if(NOT DISABLE_WX)
 			ERROR_QUIET OUTPUT_STRIP_TRAILING_WHITESPACE)
 		if(${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION}.${CMAKE_PATCH_VERSION}
 				VERSION_EQUAL 2.8.2 OR "${DIST_NAME}" STREQUAL "natty")
-			check_lib(GTK3 gtk+-2.0 gtk+-3.0 gtk.h REQUIRED)
+			check_lib(GTK3 gtk+-3.0 gtk+-3.0 gtk.h REQUIRED)
 		else()
 			include(FindGTK3)
 			if(GTK3_FOUND)
